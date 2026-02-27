@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Criminal Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <a class="back-btn" href="dashboard.php">⬅ Back to Dashboard</a>
+
+    <div class="content-wrapper">
+        <h2>🧑‍⚖️ Criminal Management</h2>
+
+        <form class="form-box" action="backend/insert_criminal.php" method="POST">
+            <input type="text" placeholder="Criminal ID" name="criminal_id" required>
+            <input type="text" placeholder="Full Name" name="name" required>
+
+            <select name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="number" placeholder="Age" name="age" required>
+            
+            <textarea placeholder="Address" name="address" rows="3" required></textarea>
+
+            <textarea placeholder="Crime History" name="crime_history" rows="4" required></textarea>
+
+            <button type="submit">Add Criminal</button>
+        </form>
+
+        <h3>Criminal List</h3>
+
+        <div class="iframe-container">
+            <iframe src="backend/fetch_criminal.php"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

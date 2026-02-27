@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Police Station</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <a class="back-btn" href="dashboard.php">⬅ Back to Dashboard</a>
+
+    <div class="content-wrapper">
+        <h2>🏢 Police Station Management</h2>
+
+        <form class="form-box" action="backend/insert_police.php" method="POST">
+            <input type="text" placeholder="Station ID" name="station_id" required>
+            <input type="text" placeholder="Station Name" name="name" required>
+            <input type="text" placeholder="Location" name="location" required>
+            <input type="text" placeholder="Contact Number" name="contact_no" required>
+            <button type="submit">Add Station</button>
+        </form>
+
+        <h3>Police Station List</h3>
+
+        <div class="iframe-container">
+            <iframe src="backend/fetch_police.php"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

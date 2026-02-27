@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Victim Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <a class="back-btn" href="dashboard.php">⬅ Back to Dashboard</a>
+
+    <div class="content-wrapper">
+        <h2>🧑 Victim Management</h2>
+
+        <form class="form-box" action="backend/insert_victim.php" method="POST">
+            <input type="text" placeholder="Victim ID" name="victim_id" required>
+            <input type="text" placeholder="Full Name" name="name" required>
+
+            <select name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <textarea placeholder="Address" name="address" rows="3" required></textarea>
+            <input type="text" placeholder="Contact Number" name="contact_no" required>
+
+            <button type="submit">Add Victim</button>
+        </form>
+
+        <h3>Victim List</h3>
+
+        <div class="iframe-container">
+            <iframe src="backend/fetch_victim.php"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

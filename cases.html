@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cases</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <a class="back-btn" href="dashboard.php">⬅ Back to Dashboard</a>
+
+    <div class="content-wrapper">
+        <h2>⚖️ Case Management</h2>
+
+        <form class="form-box" action="backend/insert_case.php" method="POST">
+            <input type="text" placeholder="Case ID" name="case_id" required>
+            <input type="text" placeholder="Case Title" name="case_title" required>
+            <input type="date" placeholder="Start Date" name="start_date" required>
+            <input type="date" placeholder="End Date" name="end_date">
+            <select name="investigation_status" required>
+                <option value="" disabled selected>Investigation Status</option>
+                <option value="Open">Open</option>
+                <option value="Under Investigation">Under Investigation</option>
+                <option value="Closed">Closed</option>
+                <option value="Pending">Pending</option>
+            </select>
+            <input type="text" placeholder="Officer ID" name="officer_id" required>
+            <input type="text" placeholder="Crime Report ID" name="crime_id" required>
+            
+            <button type="submit">Add Case</button>
+        </form>
+
+        <h3>Case List</h3>
+
+        <div class="iframe-container">
+            <iframe src="backend/fetch_case.php"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

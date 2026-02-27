@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Crime Reports</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <a class="back-btn" href="dashboard.php">⬅ Back to Dashboard</a>
+
+    <div class="content-wrapper">
+        <h2>🧭 Crime Reports Management</h2>
+
+        <form class="form-box" action="backend/insert_crime_report.php" method="POST">
+            <input type="text" placeholder="Report ID" name="report_id" required>
+            <input type="text" placeholder="Crime Type (e.g., Theft, Assault)" name="crime_type" required>
+            <input type="date" placeholder="Crime Date" name="crime_date" required>
+            <input type="text" placeholder="Location" name="location" required>
+            <input type="text" placeholder="Filed By (Officer ID)" name="filed_by" required>
+            <select name="status" required>
+                <option value="" disabled selected>Report Status</option>
+                <option value="Pending">Pending</option>
+                <option value="Under Review">Under Review</option>
+                <option value="Closed">Closed</option>
+            </select>
+            <textarea placeholder="Description" name="description" rows="4" required></textarea>
+            
+            <button type="submit">Add Report</button>
+        </form>
+
+        <h3>Crime Report List</h3>
+
+        <div class="iframe-container">
+            <iframe src="backend/fetch_crime_report.php"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Evidence Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <a class="back-btn" href="dashboard.php">⬅ Back to Dashboard</a>
+
+    <div class="content-wrapper">
+        <h2>🧩 Evidence Management</h2>
+
+        <form class="form-box" action="backend/insert_evidence.php" method="POST">
+            <input type="text" placeholder="Evidence ID" name="evidence_id" required>
+            <select name="evidence_type" required>
+                <option value="" disabled selected>Evidence Type</option>
+                <option value="Physical">Physical</option>
+                <option value="Digital">Digital</option>
+                <option value="Documentary">Documentary</option>
+                <option value="Testimonial">Testimonial</option>
+                <option value="Forensic">Forensic</option>
+            </select>
+            <textarea placeholder="Description" name="description" rows="4" required></textarea>
+            <input type="date" placeholder="Collected Date" name="collected_date" required>
+            <input type="text" placeholder="Crime Report ID" name="crime_id" required>
+            
+            <button type="submit">Add Evidence</button>
+        </form>
+
+        <h3>Evidence List</h3>
+
+        <div class="iframe-container">
+            <iframe src="backend/fetch_evidence.php"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
