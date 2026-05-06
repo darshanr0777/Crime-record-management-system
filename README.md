@@ -302,3 +302,66 @@ This project is created for academic/demo purposes. Feel free to modify and use 
 **System Status**: ✅ **READY FOR DEMO**
 
 Last Updated: 2025-11-13
+
+
+Module-1 Introduction to Project Management
+
+1. Introduction:
+
+The Crime Record Management System (CRMS) is a web-based software application developed to manage and maintain crime-related records digitally. The system helps police departments store, update, retrieve, and manage information related to police stations, officers, criminals, victims, evidence, crime reports, and cases.
+
+The application reduces manual paperwork and improves efficiency, security, and accuracy in handling crime records.
+
+Project Management plays an important role in successfully planning, developing, testing, and maintaining this software project.
+
+
+2. Activities Covered by Software Project Management:
+
+The following activities are included in the development of CRMS:
+
+1.Requirement Analysis
+
+Collecting requirements from police departments.
+
+2.Planning
+
+Creating schedules, resources, and timelines.
+
+3.Designing
+
+Designing database tables and user interfaces.
+
+4.Development
+
+Coding modules such as:
+
+Police stations
+Officers
+Crime reports
+Cases
+Criminal records
+Victim records
+Evidence management
+
+5.Testing
+
+Checking system functionality and fixing errors.
+
+6.Maintenance
+
+Updating and improving the software.
+
+Stakeholders
+
+Stakeholders are people involved in or affected by the project.
+
+3. Stakeholders in CRMS
+Police Department
+System Administrators
+Police Officers
+Government Authorities
+Development Team
+Citizens
+
+
+
