@@ -1,277 +1,205 @@
-# 🎬 CineMatch AI
-### AI-Powered Movie Recommendation System
+# 🚔 Crime Record Management System
+### Web-Based Crime Data Management Application
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![React](https://img.shields.io/badge/React-Frontend-61DAFB)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![Machine Learning](https://img.shields.io/badge/ML-Recommendation-orange)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![PHP](https://img.shields.io/badge/PHP-Backend-777BB4)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1)
+![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6)
+![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-F7DF1E)
+![License](https://img.shields.io/badge/License-Educational-green)
 
 ---
 
 # 🌟 Project Overview
 
-CineMatch AI is a full-stack AI-powered movie recommendation web application that helps users discover movies similar to the ones they already enjoy.
+Crime Record Management System is a full-stack web-based application developed to manage crime-related records digitally and efficiently.
 
-The system uses Machine Learning techniques such as:
+The system is developed using web technologies such as:
 
-- TF-IDF Vectorization
-- Content-Based Filtering
-- Cosine Similarity
+PHP
+MySQL
+HTML
+CSS
+JavaScript
 
-to generate intelligent movie recommendations based on movie genres and plot overviews.
+to provide centralized management of:
 
-The application also displays trending movies based on user ratings and provides a modern cinematic user interface using React and FastAPI.
+Police Stations
+Police Officers
+Crime Reports
+Criminal Records
+Victim Details
+Evidence Management
+Case Tracking
 
+The application reduces manual paperwork, improves efficiency, enhances data security, and provides accurate crime record management through a centralized dashboard.
 ---
 
 # 🚀 Features
 
-- 🎬 AI-Based Movie Recommendations
-- 🔥 Trending Movies Section
-- 🔍 Smart Movie Search
-- 📄 Detailed Movie Information
-- 🎨 Glassmorphism UI Design
-- ⚡ Fast API Performance
-- 📱 Responsive Design
-- 🌐 Full Stack Architecture
-
----
-
-# 📸 Screenshots
-
-## 🏠 Homepage
-![Homepage](./screenshots/homepage.png)
-
----
-
-## 🔍 Search Functionality
-![Search](./screenshots/search.png)
-
----
-
-## 🎬 Recommendation Results
-![Recommendations](./screenshots/recommendation.png)
-
----
-
-## 📱 Mobile Responsive View
-![Mobile](./screenshots/mobile.png)
+- 🚔 Police Station Management
+- 👮 Officer Management
+- 📂 Crime Report Registration
+- ⚖️ Case Tracking System
+- 🧾 Criminal Record Management
+- 🧑 Victim Information Management
+- 🔍 Evidence Management
+- 📊 Centralized Admin Dashboard
+- 🔐 Secure Data Handling
+- 📱 Responsive Web Design
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-React Frontend
-       ↓
-FastAPI Backend
-       ↓
-ML Recommendation Engine
-       ↓
-Movie Dataset (movies.csv)
+HTML/CSS/JavaScript Frontend
+              ↓
+           PHP Backend
+              ↓
+         MySQL Database
+              ↓
+      Crime Record Storage
 ```
 
 ---
 
-# 🧠 Machine Learning Workflow
+# ⚙️ Backend Architecture (PHP)
 
-1. User enters a movie name
-2. Frontend sends request to FastAPI backend
-3. Backend processes movie data
-4. TF-IDF vectorization converts text into vectors
-5. Cosine similarity calculates movie similarity
-6. Top similar movies are returned
-7. Frontend displays recommendations
+The backend acts as the bridge between the frontend interface and the MySQL database.
 
----
-
-# 🧠 Recommendation Engine
-
-The recommendation engine is based on **Content-Based Filtering**.
-
-## 📌 Data Processing
-
-Movie data is loaded from:
-
-```bash
-movies.csv
-```
-
-Important features used:
-- Genres
-- Plot Overview
-
-These features are combined into a single feature string.
+# 🛠 Backend Tech Stack
+- PHP
+- MySQL
+- Apache Server
+- XAMPP/WAMP
 
 ---
 
-## 📌 TF-IDF Vectorization
+# 📡 System Modules
+## 🚔 Police Station Module
+Manages:
 
-The project uses:
+- Police station details
+- Station locations
+- Contact information
 
-```python
-TfidfVectorizer
-```
+## 👮 Officer Module
+Manages:
 
-from Scikit-Learn to convert movie descriptions into numerical vectors.
+- Officer details
+- Officer designation
+- Assigned stations
+---
 
-Benefits:
-- Removes common stop words
-- Identifies important keywords
-- Creates meaningful vector representations
+## 📂 Crime Report Module
+Handles:
+
+- FIR registration
+- Crime descriptions
+- Crime status updates
+---
+
+## ⚖️ Case Management Module
+Tracks:
+
+- Case progress
+- Investigation status
+- Case closure
+---
+## 🧾 Criminal Records Module
+
+Stores:
+- Criminal details
+- Criminal history
+- Arrest records
+---
+## 🧑 Victim Management Module
+Maintains:
+
+- Victim details
+- Contact information
+- Complaint history
 
 ---
 
-## 📌 Cosine Similarity
+## 🔍 Evidence Management Module
+Stores:
 
-Movie similarity is calculated using cosine similarity:
-
-\[
-\cos(\theta) = \frac{A \cdot B}{||A|| ||B||}
-\]
-
-Movies with similar genres and story themes receive higher similarity scores.
-
+- Evidence details
+- Evidence status
+- Related case information
 ---
+## 💻 Frontend Architecture (HTML, CSS, JavaScript)
+The frontend is developed using HTML, CSS, and JavaScript to create a responsive and user-friendly interface.
 
-# ⚙️ Backend Architecture (FastAPI)
-
-The backend acts as a bridge between the Machine Learning engine and the frontend.
-
-## 🛠 Backend Tech Stack
-
-- Python
-- FastAPI
-- Pandas
-- NumPy
-- Scikit-Learn
-- Uvicorn
-
+##🛠 Frontend Tech Stack
+-HTML5
+-CSS3
+-JavaScript
 ---
-
-# 📡 API Endpoints
-
-## 🔥 Trending Movies
-
-```http
-GET /api/trending
-```
-
-Returns top trending movies.
-
----
-
-## 🎬 Recommendations
-
-```http
-GET /api/recommend?movie_name=Inception
-```
-
-Returns:
-- Selected movie details
-- Similar movie recommendations
-
----
-
-## 🎭 Genres
-
-```http
-GET /api/genres
-```
-
-Returns all movie genres.
-
----
-
-## 📚 Movies
-
-```http
-GET /api/movies
-```
-
-Returns movie lists.
-
----
-
-# 💻 Frontend Architecture (React + Vite)
-
-The frontend is developed using React and Vite for high performance and faster development.
-
-## 🛠 Frontend Tech Stack
-
-- React.js
-- Vite
-- Axios
-- CSS3
-- JavaScript (ES6+)
-
----
-
-# 🎨 User Interface Features
-
-## 🏠 Homepage
-
-- Trending movie grid
-- Dynamic content loading
-
+## 🎨 User Interface Features
+## 🏠 Dashboard
+- Crime statistics
+- Quick navigation
+- Case overview
 ---
 
 ## 🔍 Search System
-
 Users can:
-- Search movies instantly
-- Get AI recommendations
-- View loading animations
-- Receive error messages
 
+- Search crime records
+- Search criminal records
+- Filter cases
+- View reports instantly
 ---
-
-## 📄 Detailed Movie View
+## 📄 Detailed Record View
 
 Displays:
-- Movie Poster
-- Title
-- Rating
-- Genres
-- Overview
-- Similar recommendations
 
+- Crime details
+- Criminal information
+- Victim records
+- Investigation status
 ---
+## ✨ Responsive UI
 
-## ✨ Glassmorphism UI
+Modern UI features include:
 
-Modern UI effects include:
-- Frosted glass design
-- Transparent cards
-- Cinematic visual appearance
-
+- Responsive design
+- Interactive forms
+- User-friendly navigation
+- Clean interface layout
 ---
-
 # 📘 Project Management Concept Implementation
 
-CineMatch AI is developed by applying important Project Management concepts including planning, risk management, testing, maintenance, and globalization.
-
+Crime Record Management System is developed by applying important Project Management concepts including planning, stakeholder management, testing, maintenance, and system management.
 ---
 
 # 1️⃣ Introduction to Project Management
 
 ## ✅ Project Objective
 
-The primary objective of CineMatch AI is to provide intelligent movie recommendations using Machine Learning techniques based on user preferences, genres, and movie similarity analysis.
+The primary objective of the Crime Record Management System is to provide a secure and efficient web application for managing crime-related records digitally.
 
+The system helps:
+
+- Reduce manual paperwork
+- Improve efficiency
+- Increase record accuracy
+- Enable faster case management
 ---
 
 ## 👥 Stakeholders
 
 The stakeholders involved in the project include:
 
-- Users searching for movie recommendations
-- Frontend Developers
-- Backend Developers
-- Machine Learning Engineers
-- System Administrators
-
+- Police Departments
+- Administrators
+- Police Officers
+- Government Authorities
+- Development Team
+- Citizens
 ---
 
 ## 🔄 Project Life Cycle Used
@@ -280,12 +208,13 @@ The project follows the Software Development Life Cycle (SDLC):
 
 1. Requirement Analysis
 2. Project Planning
-3. UI/UX Design
+3. System Design
 4. Backend Development
-5. Machine Learning Integration
-6. Testing
-7. Deployment
-8. Maintenance
+5. Frontend Development
+6. Database Integration
+7. Testing
+8. Deployment
+9. Maintenance
 
 ---
 
@@ -293,10 +222,15 @@ The project follows the Software Development Life Cycle (SDLC):
 
 The project was divided into independent modules:
 
-- Frontend Development using React + Vite
-- Backend API Development using FastAPI
-- Recommendation Engine Development
-- Database and Dataset Handling
+- Authentication Module
+- Admin Dashboard
+- Police Station Management
+- Officer Management
+- Crime Report Management
+- Criminal Record Management
+- Victim Management
+- Evidence Management
+- Database Integration
 - Testing and Deployment
 
 ---
@@ -312,16 +246,15 @@ The project was divided into independent modules:
 
 # 2️⃣ Risk Management
 
-## ✅ Risks Identified in CineMatch AI
-
-| Risk | Impact | Mitigation |
-|---|---|---|
-| Incorrect movie recommendations | Poor user experience | Improve similarity algorithms |
-| API response failure | Application crash | Exception handling |
-| Slow recommendation processing | Increased response time | TF-IDF optimization |
-| Dataset inconsistency | Wrong predictions | Data preprocessing |
-| Invalid user input | Backend errors | Input validation |
-| Server overload | Downtime | Efficient API management |
+## ✅ Risks Identified in Crime Record Management System
+| Risk                | Impact            | Mitigation                  |
+| ------------------- | ----------------- | --------------------------- |
+| Data loss           | Record damage     | Database backup             |
+| Unauthorized access | Security breach   | Authentication system       |
+| Invalid data entry  | Incorrect records | Input validation            |
+| Server failure      | Downtime          | Server maintenance          |
+| Database corruption | System failure    | Regular database monitoring |
+| Poor UI usability   | User confusion    | Responsive interface design |
 
 ---
 
@@ -332,19 +265,20 @@ Potential technical and operational risks were identified during planning.
 
 ### 🔹 Risk Analysis
 Risks analyzed based on:
+
 - Severity
 - Probability
-- User impact
+- System impact
 
 ### 🔹 Risk Mitigation
 Implemented:
-- API validation
-- Error handling
-- Optimized ML processing
-
+- Authentication system
+- Input validation
+- Database security
+- Backup systems
+- 
 ### 🔹 Risk Monitoring
-API logs and system performance are monitored continuously.
-
+System logs and database performance are monitored continuously.
 ---
 
 # 3️⃣ Software Requirements Gathering
@@ -352,43 +286,43 @@ API logs and system performance are monitored continuously.
 ## ✅ Functional Requirements
 
 The system should:
-- Search movies
-- Recommend similar movies
-- Display trending movies
-- Show movie details
-- Filter by genres
-- Handle invalid searches
 
+- Register crime reports
+- Manage criminal records
+- Maintain victim details
+- Track case status
+- Manage evidence records
+- Generate reports
 ---
 
 ## ✅ Non-Functional Requirements
 
 The system should:
-- Be fast and responsive
-- Support multiple devices
-- Ensure secure API communication
-- Handle large datasets efficiently
+- Be secure and reliable
+- Support responsive design
+- Handle large records efficiently
+- Provide fast database access
 
 ---
 
 ## 📌 Requirement Gathering Techniques
 
-- User behavior analysis
-- Competitor research
-- Streaming platform analysis
-- Feedback-based planning
-
+- Police department analysis
+- Manual system study
+- User feedback collection
+- Crime record workflow analysis
 ---
 
 # ⏱ Project Estimation
 
-| Task | Estimated Time |
-|---|---|
-| Frontend UI Design | 4 Days |
-| Backend API Development | 5 Days |
-| ML Model Integration | 7 Days |
-| Testing | 4 Days |
-| Deployment | 2 Days |
+| Task                | Estimated Time |
+| ------------------- | -------------- |
+| Frontend UI Design  | 4 Days         |
+| Backend Development | 6 Days         |
+| Database Design     | 3 Days         |
+| CRUD Operations     | 5 Days         |
+| Testing             | 4 Days         |
+| Deployment          | 2 Days         |
 
 ---
 
@@ -398,55 +332,54 @@ The system should:
 
 ### 🔹 Unit Testing
 Tested:
-- Recommendation engine
-- Search functionality
-- API endpoints
+- Login module
+- CRUD operations
+- Database connectivity
 
 ---
 
 ### 🔹 Integration Testing
 Tested communication between:
-- React frontend
-- FastAPI backend
-- ML engine
-
+- Frontend
+- PHP backend
+- MySQL database
 ---
 
 ### 🔹 System Testing
 
 Workflow tested:
-1. User searches movie
-2. Backend processes request
-3. ML model generates recommendations
-4. Frontend displays results
+1. Admin login
+2. Add crime record
+3. Update case status
+4. Retrieve database records
+5. Generate reports
 
 ---
 
 ### 🔹 User Acceptance Testing
 System tested for:
-- Recommendation quality
 - User experience
-- UI responsiveness
+- Record accuracy
+- Interface usability
 
 ---
 
 ### 🔹 Performance Testing
 
 Checked:
-- API speed
-- Dataset loading
-- Recommendation response time
-
+- Database speed
+- Form processing
+- Server response time
 ---
 
 # 📋 Example Test Cases
 
-| Test Case | Expected Result |
-|---|---|
-| Search “Inception” | Similar movies displayed |
-| Invalid movie search | Error message shown |
-| Homepage load | Trending movies displayed |
-| API request | JSON response returned |
+| Test Case          | Expected Result            |
+| ------------------ | -------------------------- |
+| Admin Login        | Successful authentication  |
+| Add Crime Record   | Record stored successfully |
+| Update Case Status | Database updated           |
+| Invalid Input      | Error message displayed    |
 
 ---
 
@@ -455,22 +388,22 @@ Checked:
 ## ✅ Maintenance Activities
 
 ### 🔧 Bug Fixing
-- Frontend issue resolution
-- Backend API fixes
+- PHP code issue fixing
+- Database issue resolution
 
 ### 🔄 Dataset Maintenance
-Movie datasets can be updated regularly.
+Database records can be updated regularly.
 
 ### 🚀 Future Feature Enhancements
-- User Authentication
-- Watchlists
-- Hybrid Recommendation System
-- Personalized Dashboard
+- Online FIR Registration
+- Mobile Application
+- AI Crime Prediction
+- SMS Notifications
 
 ### 🔐 Security Maintenance
-- API validation
 - Input sanitization
-- CORS security configuration
+- Authentication security
+- SQL injection prevention
 
 ---
 
@@ -478,20 +411,21 @@ Movie datasets can be updated regularly.
 
 ## ✅ Internet-Based Architecture
 
-CineMatch AI works as a cloud-ready internet application where:
-- Frontend communicates with backend APIs online
-- Recommendations are dynamically generated
-- Users can access globally
+Crime Record Management System works as a web-based application where:
+
+- Frontend communicates with backend online
+- Records are managed digitally
+- Users can access through local servers
 
 ---
 
 ## 🌍 Global Collaboration
 
 Development tools used:
+
 - GitHub
 - Git Version Control
-- Remote workflows
-- Online deployment platforms
+- Online documentation tools
 
 ---
 
@@ -502,18 +436,19 @@ Supports:
 - Mobile
 - Tablets
 
-through responsive UI design.
+through responsive web design.
 
 ---
 
 ## ⚡ Continuous Availability
 
-The application can be deployed on:
-- Vercel
-- Render
-- Netlify
+The application can be deployed using:
 
-for 24/7 accessibility.
+- XAMPP
+- WAMP
+- Cloud Hosting Platforms
+
+for continuous accessibility.
 
 ---
 
@@ -524,7 +459,7 @@ for 24/7 accessibility.
 Development was completed incrementally:
 - Frontend module
 - Backend module
-- ML recommendation engine
+- Database module
 - Testing module
 
 ---
@@ -534,42 +469,38 @@ Development was completed incrementally:
 GitHub used for:
 - Source code management
 - Collaboration
-- Version tracking
 - Backup management
+- Version tracking
 
 ---
 
 ## ✅ Continuous Improvement
 
-The recommendation system can improve using:
-- Updated datasets
-- User feedback
-- Better recommendation algorithms
+The system can improve using:
 
+- Better security mechanisms
+- Updated database structures
+- User feedback
+- Advanced analytics
 ---
 
 # 📂 Project Structure
 
 ```bash
-CineMatch-AI/
+Crime-Record-Management-System/
 │
-├── backend/
-│   ├── main.py
-│   ├── recommender.py
-│   ├── movies.csv
-│   └── requirements.txt
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
+├── admin/
+├── police/
+├── database/
+├── css/
+├── js/
+├── images/
 ├── screenshots/
-│   ├── homepage.png
-│   ├── search.png
-│   ├── recommendation.png
-│   └── mobile.png
 │
+├── index.php
+├── login.php
+├── dashboard.php
+├── config.php
 └── README.md
 ```
 
@@ -580,7 +511,7 @@ CineMatch-AI/
 ## Clone the repository
 
 ```bash
-git clone https://github.com/sunilarlur/CineMatch-AI.git
+git clone https://github.com/project/crime-record-management-system.git
 ```
 
 ---
@@ -588,108 +519,98 @@ git clone https://github.com/sunilarlur/CineMatch-AI.git
 ## Navigate to the project folder
 
 ```bash
-cd CineMatch-AI
+cd crime-record-management-system
 ```
 
 ---
 
-# ⚙️ Backend Setup
+# ⚙️ Database Setup
 
-## Navigate to backend
-
+## Import MySQL Database
 ```bash
-cd backend
+crime_record.sql
 ```
 
 ---
 
-## Install dependencies
-
+## Configure Database
+Update database details in:
 ```bash
-pip install -r requirements.txt
+config.php
 ```
 
 ---
 
-## Run FastAPI server
+## Example:
 
 ```bash
-uvicorn main:app --reload
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "crime_record";
 ```
 
-Backend runs on:
-
-```bash
-http://127.0.0.1:8000
-```
 
 ---
 
-# 💻 Frontend Setup
+# 💻 Server Setup
 
 ## Navigate to frontend
 
+Place project inside
 ```bash
-cd frontend
+htdocs
 ```
 
 ---
+Start Servers
 
-## Install dependencies
+Start:
 
+- Apache Server
+- MySQL Server
+
+## Run Project
+Open browser:
 ```bash
-npm install
+[npm install](http://localhost/crime-record-management-system)
 ```
-
 ---
 
-## Start frontend server
-
-```bash
-npm run dev
-```
-
-Frontend runs on:
-
-```bash
-http://localhost:5173
-```
-
----
 
 # 🚀 Future Enhancements
 
-- 🎥 Movie Trailer Integration
-- 👤 User Authentication
-- ❤️ Watchlists
-- 🤝 Collaborative Filtering
-- 🌙 Dark Mode
-- 🎤 Voice Search
-- 📊 Recommendation Analytics
+- 🤖 AI Crime Prediction
+- 📱 Android Application
+- ☁️ Cloud Database Integration
+- 📊 Crime Analytics Dashboard
+- 🌐 Online FIR Registration
+- 🔐 Biometric Authentication
 
 ---
 
 # 🌐 Deployment
 
 Frontend Deployment:
-- Vercel
-- Netlify
+
+- Localhost Server
+- Web Hosting Platforms
 
 Backend Deployment:
-- Render
-- Railway
 
+- Apache Server
+- XAMPP/WAMP
 ---
 
 # 📜 License
 
-This project is licensed under the MIT License.
+This project is developed for educational purposes.
 
 ---
 
 # 👨‍💻 Author
 
-Developed by **Sunil A**
+Developed by **Darshan R,Balaji Darshan M,Charan Tej BM,Chandan KP,Darshan BR**
 
 ---
 
